@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { HashRouter as Router, Routes, Route } from "react-router-dom"; // <-- changed BrowserRouter to HashRouter
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // ✅ BrowserRouter for clean URLs
 
 // Screens
 import HomeScreen from "./Screens/HomeScreen";
