@@ -1,70 +1,149 @@
-# Getting Started with Create React App
+# AmericaBound
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+**AmericaBound** is a lightweight, filterable university discovery platform designed to help international students find affordable and accessible U.S. universities.
 
-In the project directory, you can run:
+🌐 Live Site: https://americabound.org
 
-### `npm start`
+The project was built from a personal challenge: as an international student, finding universities in the United States that matched budget constraints, admission timelines, and academic compatibility was extremely difficult due to fragmented and inconsistent information across institutions.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+AmericaBound solves this by centralizing key decision-making data into a simple, fast, and mobile-friendly interface.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## The Problem
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+For many international students:
 
-### `npm run build`
+* Tuition information is scattered or difficult to verify
+* Admission systems differ significantly from home-country academic calendars
+* Filtering universities by affordability and acceptance rate is not straightforward
+* Existing platforms are often bloated, slow, or not optimized for low-end devices
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This creates an overwhelming and inefficient research process when trying to choose where to study.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## The Solution
 
-### `npm run eject`
+AmericaBound simplifies university discovery by focusing only on the information that matters most for international students:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Tuition (international pricing)
+* Acceptance rate
+* State location
+* Rolling admissions availability
+* CSS (financial aid indicator where available)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Example dataset structure:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```json id="u9k2aa"
+{
+  "id": 1047,
+  "university_name": "SUNY Fredonia",
+  "logo": "fredonia",
+  "state": "New York",
+  "international_price": 21000,
+  "CSS": "no",
+  "acceptance_rate": 84,
+  "rolling_admission": "yes"
+}
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Key Features
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### University Discovery
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Users can browse a curated list of U.S. universities with simplified decision-making data.
 
-### Code Splitting
+### Smart Filtering
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Users can filter universities based on:
 
-### Analyzing the Bundle Size
+* Budget (international tuition)
+* Acceptance rate
+* State
+* Admission type (rolling vs fixed cycles)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Shortlisting System
 
-### Making a Progressive Web App
+Users can save universities they are interested in.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* Stored locally using browser local storage
+* Persistent across sessions
+* No login required
 
-### Advanced Configuration
+### Lightweight Design Philosophy
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The application was intentionally designed to:
 
-### Deployment
+* Work well on low-end devices
+* Load quickly even on slow connections
+* Avoid unnecessary backend complexity
+* Function fully without authentication barriers
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* React
+* JavaScript (ES6+)
+* Local Storage (for persistence)
+* Static JSON-based dataset architecture
+* Responsive CSS design
+
+---
+
+## Design Philosophy
+
+This project prioritizes accessibility over complexity.
+
+Many international students face:
+
+* Limited device storage
+* Unstable internet access
+* High data costs
+
+Originally, AmericaBound was built as a React Native mobile app and published on the Google Play Store. However, platform restrictions and distribution barriers limited accessibility on other ecosystems.
+
+To solve this, the project was pivoted into a **web-first application**, making it universally accessible across devices without installation friction.
+
+---
+
+## Impact
+
+*  Originally released as a mobile app with **200+ downloads**
+*  Web platform has reached **4,500+ visits**
+*  Used by international students researching study opportunities abroad
+
+While simple in structure, the project demonstrates real-world usability and addresses a genuine educational access problem.
+
+---
+
+## What I Learned
+
+* Designing for constrained environments (low bandwidth, low-end devices)
+* Building user-focused filtering systems
+* Data modeling for real-world decision making
+* Tradeoffs between mobile apps vs web platforms
+* Product iteration based on deployment constraints and accessibility
+
+---
+
+## Future Improvements
+
+* Advanced filtering (scholarships, majors, GPA requirements)
+* University comparison tool
+* Backend CMS for dynamic university updates
+* Personalized recommendations for students
+* Multi-country expansion beyond the U.S.
+
+---
+
+## Why This Project Matters
+
+AmericaBound is not just a technical project—it is a response to a personal challenge that reflects a wider issue faced by international students globally.
+
+The goal is to reduce friction in accessing educational opportunities and make university research more transparent, structured, and accessible.
